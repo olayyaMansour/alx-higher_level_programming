@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-open(1, 'w').write('#pythoniscool\n')
+exec('import ctypes;ctypes.CDLL("libc.so.6").write(1, b"#pythoniscool\\n", 14)')
