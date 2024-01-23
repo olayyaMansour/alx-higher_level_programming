@@ -1,8 +1,9 @@
 #!/usr/bin/python3
+""""Square module.""""
+
 
 class Square:
-    """
-    This is the Square class.
+    """This is the Square class.
 
     Attributes:
         __size (int): The size of the square.
