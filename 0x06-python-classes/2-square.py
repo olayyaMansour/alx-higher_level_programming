@@ -7,12 +7,12 @@ Define a class Square.
 
 class Square:
     """
-    Represent a square.
+    Implement a square.
     """
 
     def __init__(self, size=0):
         """
-        Initialize a new Square.
+        Initializing a new Square.
 
         Args:
             size (int): The size of the new square (default is 0).
