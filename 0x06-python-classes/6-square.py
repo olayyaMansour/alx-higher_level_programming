@@ -27,7 +27,7 @@ class Square:
 
         Args:
             value (int): The size value.
-        
+
         Raises:
             TypeError: If size is not an integer.
             ValueError: If size is less than 0.
@@ -49,7 +49,7 @@ class Square:
 
         Args:
             value (tuple): The position value.
-        
+
         Raises:
             TypeError: If position is not a tuple of 2 positive integers.
         """
@@ -77,4 +77,3 @@ class Square:
             [print(" ", end="") for _ in range(self.__position[0])]
             [print("#", end="") for _ in range(self.__size)]
             print("")
-
