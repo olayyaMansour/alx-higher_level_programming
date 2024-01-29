@@ -4,7 +4,7 @@
 
 class Rectangle:
     """Represent a rectangle."""
-    
+
     def __init__(self, width=0, height=0):
         """Initialize a rectangle with optional width and height."""
         self.width = width
@@ -59,4 +59,3 @@ class Rectangle:
     def __repr__(self):
         """Return a representation of the rectangle."""
         return "Rectangle({}, {})".format(self.__width, self.__height)
-
