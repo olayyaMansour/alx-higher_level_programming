@@ -29,3 +29,7 @@ TypeError: b must be an integer
 Traceback (most recent call last):
     ...
 TypeError: a must be an integer
+
+# Test case 7 - Decimal to integer conversion
+>>> add_integer(1.4, 2)
+3
