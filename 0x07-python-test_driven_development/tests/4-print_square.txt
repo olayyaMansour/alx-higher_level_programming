@@ -1,0 +1,31 @@
+# Test cases for print_square function
+
+>>> from 4-print_square import print_square
+
+# Test case 1 - Size 4
+>>> print_square(4)
+####
+####
+####
+####
+
+# Test case 2 - Size 10
+>>> print_square(10)
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+
+# Test case 3 - Size 0
+>>> print_square(0)
+
+# Test case 4 - Size 1
+>>> print_square(1)
+#
+
