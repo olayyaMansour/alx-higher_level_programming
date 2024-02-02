@@ -1,0 +1,27 @@
+# Test cases for print_person_name function
+
+>>> from 3-say_my_name import print_person_name
+
+# Test case 1 - Full name provided
+>>> print_person_name("John", "Smith")
+My name is John Smith
+
+# Test case 2 - Full name provided (different names)
+>>> print_person_name("Walter", "White")
+My name is Walter White
+
+# Test case 3 - Only first name provided
+>>> print_person_name("Bob")
+My name is Bob
+
+# Test case 4 - Non-string input for first name
+>>> print_person_name(12, "White")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+# Test case 5 - Non-string input for last name
+>>> print_person_name("John", 42)
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
