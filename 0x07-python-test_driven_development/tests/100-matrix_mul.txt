@@ -1,0 +1,12 @@
+# Test cases for matrix_mul function
+
+>>> from 100-matrix_mul import matrix_mul
+
+# Test case 1
+>>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+[[7, 10], [15, 22]]
+
+# Test case 2
+>>> matrix_mul([[1, 2]], [[3, 4], [5, 6]])
+[[13, 16]]
+
