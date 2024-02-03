@@ -1,53 +1,78 @@
-# Test cases for matrix_divided function
+How to Use 2-matrix_divided.py
+=============================
 
->>> from 2-matrix_divided import matrix_divided
+This module defines a matrix division function ``matrix_divided(matrix, div)``.
 
-# Test case 1
->>> matrix = [[1, 2, 3], [4, 5, 6]]
->>> matrix_divided(matrix, 3)
-[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
->>> matrix  # original matrix should remain unchanged
-[[1, 2, 3], [4, 5, 6]]
+Usage
+=====
 
-# Test case 2 - Check rounding to 2 decimal places
->>> matrix = [[5, 8, 9], [2, 6, 7]]
->>> matrix_divided(matrix, 2)
-[[2.5, 4.0, 4.5], [1.0, 3.0, 3.5]]
+``matrix_divided(...)``` returns a new matrix with elements divided by a divisor.
 
-# Test case 3 - Check division by 1
->>> matrix = [[10, 20], [30, 40]]
->>> matrix_divided(matrix, 1)
-[[10.0, 20.0], [30.0, 40.0]]
+::
 
-# Test case 4 - Check division by a decimal number
->>> matrix = [[2, 4, 6], [8, 10, 12]]
->>> matrix_divided(matrix, 0.5)
-[[4.0, 8.0, 12.0], [16.0, 20.0, 24.0]]
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 3)
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
 
-# Test case 5 - Check division by zero
->>> matrix = [[1, 2], [3, 4]]
->>> matrix_divided(matrix, 0)
-Traceback (most recent call last):
-    ...
-ZeroDivisionError: division by zero
+::
 
-# Test case 6 - Check non-numeric elements in the matrix
->>> matrix = [[3, "9"], [15, 3]]
->>> matrix_divided(matrix, 3)
-Traceback (most recent call last):
-    ...
-TypeError: matrix must be a matrix (list of lists) of integers/floats
+    >>> matrix_divided([[1, 2]], 2)
+    [[0.5, 1.0]]
 
-# Test case 7 - Check rows with different sizes
->>> matrix = [[1, 2, 3], [4, 5]]
->>> matrix_divided(matrix, 2)
-Traceback (most recent call last):
-    ...
-TypeError: Each row of the matrix must have the same size
+The divisor can be a float.
 
-# Test case 8 - Check div is not a number
->>> matrix = [[1, 2], [3, 4]]
->>> matrix_divided(matrix, 'abc')
-Traceback (most recent call last):
-    ...
-TypeError: div must be a number
+::
+
+    >>> matrix_divided([[1, 2], [3, 4]], 2.5)
+    [[0.4, 0.8], [1.2, 1.6]]
+
+Note that the result is rounded to 2 decimal places.
+
+::
+
+    >>> matrix_divided([[1, 2], [3, 4]], 3)
+    [[0.33, 0.67], [1.0, 1.33]]
+
+Non-Numbers
+===========
+
+The matrix and divisor must follow specific criteria to avoid errors.
+
+If matrix is not a list of lists or if div is not a number, a TypeError is raised:
+
+::
+
+    >>> matrix_divided([1, 2, 3], 2)
+    Traceback (most recent call last):
+    TypeError: matrix must be a list of lists
+
+::
+
+    >>> matrix_divided([[1, 2], [3, 4]], 'abc')
+    Traceback (most recent call last):
+    TypeError: div must be a number
+
+An empty matrix or a divisor of 0 will raise a ValueError.
+
+::
+
+    >>> matrix_divided([], 2)
+    Traceback (most recent call last):
+    ValueError: matrix can't be empty
+
+::
+
+    >>> matrix_divided([[1, 2], [3, 4]], 0)
+    Traceback (most recent call last):
+    ValueError: division by zero
+
+Invalid Matrix Structure
+========================
+
+The function requires that all rows in the matrix have the same size. If not, a TypeError is raised:
+
+::
+
+    >>> matrix_divided([[1, 2], [3, 4, 5]], 2)
+    Traceback (most recent call last):
+    TypeError: each row of matrix must have the same size
+

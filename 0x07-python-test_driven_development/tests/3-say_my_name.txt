@@ -1,21 +1,42 @@
-# Test cases for say_my_name function
+How to Use 3-say_my_name.py
+===========================
 
->>> from 3-say_my_name import say_my_name
+This module defines a name-printing function ``say_my_name(first_name, last_name="")``.
 
-# Test case 1 - Full name provided
->>> say_my_name("John", "Smith")
-My name is John Smith
+Usage
+=====
 
-# Test case 2 - Full name provided (different names)
->>> say_my_name("Walter", "White")
-My name is Walter White
+``say_my_name(...)``` prints a formatted name.
 
-# Test case 3 - Only first name provided
->>> say_my_name("Bob")
-My name is Bob
+::
 
-# Test case 4 - Non-string input for first name
->>> say_my_name(12, "White")
-Traceback (most recent call last):
-    ...
-TypeError: first_name must be a string or last_name must be a string
+    >>> say_my_name("John", "Smith")
+    My name is John Smith
+
+::
+
+    >>> say_my_name("Walter", "White")
+    My name is Walter White
+
+::
+
+    >>> say_my_name("Bob")
+    My name is Bob
+
+Non-Strings
+===========
+
+If either first_name or last_name is not a string, a TypeError is raised:
+
+::
+
+    >>> say_my_name(12, "White")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+::
+
+    >>> say_my_name("Walter", 123)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
