@@ -17,4 +17,3 @@ This is a sample test file for 1-my_list.py.
 >>> print(my_list)
 [1, 4, 2, 3, 5]
 """
-
