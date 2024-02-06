@@ -3,8 +3,8 @@
 This module provides a function to create an object from a JSON file.
 """
 
-
 import json
+
 
 def load_from_json_file(filename):
     """
