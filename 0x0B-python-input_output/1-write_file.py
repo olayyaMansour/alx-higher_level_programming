@@ -7,10 +7,10 @@ the number of characters written.
 
 def write_file(filename="", text=""):
     """
-    Writes a string to a text file (UTF8) and returns the number of characters written.
+    Writes a string to a text file and returns the number of chars.
 
-    :param filename: Name of the file to be written (default is an empty string)
-    :param text: The string to be written to the file (default is an empty string)
+    :param filename: Name of the file to be written
+    :param text: The string to be written to the file
     :return: The number of characters written
     """
     with open(filename, mode='w', encoding='utf-8') as file:
