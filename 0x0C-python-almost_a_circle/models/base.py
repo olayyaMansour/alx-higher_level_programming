@@ -13,7 +13,7 @@ class Base:
         """Constructor for Base class.
 
         Args:
-            id (int): Unique identifier. If not provided, it will be automatically generated.
+            id (int): Unique identifier.
         """
         if id is not None:
             self.id = id
