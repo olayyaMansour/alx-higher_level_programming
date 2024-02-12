@@ -14,7 +14,7 @@ class Rectangle(Base):
             height (int): Height of the rectangle.
             x (int): X-coordinate of the rectangle's position.
             y (int): Y-coordinate of the rectangle's position.
-            id (int): Unique identifier. If not provided, it will be automatically generated.
+            id (int): Unique identifier.
         """
         super().__init__(id)
         self.width = width
