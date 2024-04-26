@@ -10,11 +10,15 @@ import requests
 import sys
 
 if __name__ == "__main__":
+    if len(sys.argv) != 3:
+        print("Usage: ./10-my_github.py <username> <token>")
+        sys.exit(1)
+
     username = sys.argv[1]
-    password = sys.argv[2]
+    token = sys.argv[2]
 
     url = 'https://api.github.com/user'
-    response = requests.get(url, auth=(username, password))
+    response = requests.get(url, auth=(username, token))
 
     try:
         user_info = response.json()
