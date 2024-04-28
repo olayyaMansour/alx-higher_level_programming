@@ -10,4 +10,3 @@ if __name__ == "__main__":
     # retrieve the states by id
     cursor.execute("SELECT * FROM `states` ORDER BY `id`")
     [print(state) for state in cursor.fetchall() if state[1][0] == "N"]
-
